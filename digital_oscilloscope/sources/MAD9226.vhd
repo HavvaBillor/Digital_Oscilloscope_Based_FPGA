@@ -14,9 +14,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity AD9226_Controller is
     port (
-		CLK         : in std_logic;
-		RST_N		: in std_logic;
-		START		: in std_logic;
+	CLK         : in std_logic;
+	RST_N	    : in std_logic;
+	START	    : in std_logic;
         PIADCDATA   : in STD_LOGIC_VECTOR(11 downto 0);
         POADCDATA   : out STD_LOGIC_VECTOR(11 downto 0)
     );
