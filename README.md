@@ -15,7 +15,7 @@ It performs real-time analog signal sampling and displays the waveform via VGA o
 
 ## Obtained Waveform
 
-Below is a sample of the waveform captured and displayed by the oscilloscope:
+Below is a sample of the waveform captured and displayed by the ADC:
 
 ![Image](https://github.com/user-attachments/assets/2715b21e-2928-4406-a5b7-bb14b34c3a6c)
 
