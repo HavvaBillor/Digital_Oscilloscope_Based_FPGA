@@ -29,8 +29,6 @@ Watch the oscilloscope in action on YouTube:
 
 ---
 
-## Project Structure  
-
 
 
 
