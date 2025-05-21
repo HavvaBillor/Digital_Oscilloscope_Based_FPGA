@@ -1,0 +1,7 @@
+vhdl work "ipcore_dir/PLL1.vhd"
+vhdl work "ipcore_dir/PLL1/example_design/PLL1_exdes.vhd"
+vhdl work "../../Yeni klasör/vga_sync.vhd"
+vhdl work "../../Yeni klasör/Term_Project_Library.vhd"
+vhdl work "../../Yeni klasör/vga_controller.vhd"
+vhdl work "../../Yeni klasör/MAD9226.vhd"
+vhdl work "../../Yeni klasör/top_module.vhd"

@@ -1,0 +1,1268 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: TOP_MODULE.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP_MODULE.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP_MODULE"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-ftg256
+
+---- Source Options
+Top Module Name                    : TOP_MODULE
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\h.billor\Desktop\PROJECT\digital_oscilloscope\ipcore_dir\PLL1.vhd" into library work
+Parsing entity <PLL1>.
+Parsing architecture <xilinx> of entity <pll1>.
+Parsing VHDL file "C:\Users\h.billor\Desktop\PROJECT\digital_oscilloscope\ipcore_dir\PLL1\example_design\PLL1_exdes.vhd" into library work
+Parsing entity <PLL1_exdes>.
+Parsing architecture <xilinx> of entity <pll1_exdes>.
+Parsing VHDL file "C:\Users\h.billor\Desktop\Yeni klasör\vga_sync.vhd" into library work
+Parsing entity <VGA_Sync>.
+Parsing architecture <Behavioral> of entity <vga_sync>.
+Parsing VHDL file "C:\Users\h.billor\Desktop\Yeni klasör\Term_Project_Library.vhd" into library work
+Parsing package <TermProjectLibrary>.
+Parsing package body <TermProjectLibrary>.
+Parsing VHDL file "C:\Users\h.billor\Desktop\Yeni klasör\vga_controller.vhd" into library work
+Parsing entity <VGA_Driver>.
+Parsing architecture <Behavioral> of entity <vga_driver>.
+Parsing VHDL file "C:\Users\h.billor\Desktop\Yeni klasör\MAD9226.vhd" into library work
+Parsing entity <AD9226_Controller>.
+Parsing architecture <Behavioral> of entity <ad9226_controller>.
+Parsing VHDL file "C:\Users\h.billor\Desktop\Yeni klasör\top_module.vhd" into library work
+Parsing entity <TOP_MODULE>.
+Parsing architecture <Behavioral> of entity <top_module>.
+WARNING:HDLCompiler:946 - "C:\Users\h.billor\Desktop\Yeni klas r\top_module.vhd" Line 147: Actual for formal port c1 is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TOP_MODULE> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PLL1> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <AD9226_Controller> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VGA_Driver> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VGA_Sync> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP_MODULE>.
+    Related source file is "C:\Users\h.billor\Desktop\Yeni klasör\top_module.vhd".
+    Summary:
+	no macro.
+Unit <TOP_MODULE> synthesized.
+
+Synthesizing Unit <PLL1>.
+    Related source file is "C:\Users\h.billor\Desktop\PROJECT\digital_oscilloscope\ipcore_dir\PLL1.vhd".
+    Summary:
+	no macro.
+Unit <PLL1> synthesized.
+
+Synthesizing Unit <AD9226_Controller>.
+    Related source file is "C:\Users\h.billor\Desktop\Yeni klasör\MAD9226.vhd".
+    Found 9-bit register for signal <clk_counter>.
+    Found 12-bit register for signal <delay_line<0>>.
+    Found 12-bit register for signal <delay_line<1>>.
+    Found 12-bit register for signal <delay_line<2>>.
+    Found 12-bit register for signal <delay_line<3>>.
+    Found 12-bit register for signal <delay_line<4>>.
+    Found 12-bit register for signal <delay_line<5>>.
+    Found 12-bit register for signal <delay_line<6>>.
+    Found 1-bit register for signal <clk_100k>.
+    Found 9-bit adder for signal <clk_counter[8]_GND_14_o_add_1_OUT> created at line 47.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  94 D-type flip-flop(s).
+Unit <AD9226_Controller> synthesized.
+
+Synthesizing Unit <VGA_Driver>.
+    Related source file is "C:\Users\h.billor\Desktop\Yeni klasör\vga_controller.vhd".
+    Found 1024x9-bit dual-port RAM <Mram_sample_ram> for signal <sample_ram>.
+    Found 12-bit register for signal <clk_counter>.
+    Found 9-bit register for signal <y_value>.
+    Found 10-bit register for signal <write_ptr>.
+    Found 5-bit register for signal <bg_red>.
+    Found 6-bit register for signal <bg_green>.
+    Found 5-bit register for signal <bg_blue>.
+    Found 1-bit register for signal <clk_10k>.
+    Found 1-bit register for signal <adc_int>.
+    Found 12-bit register for signal <adc_int_dummy>.
+    Found 13-bit subtractor for signal <n0146> created at line 4463.
+    Found 13-bit subtractor for signal <n0147> created at line 4465.
+    Found 13-bit subtractor for signal <n0158[12:0]> created at line 200.
+    Found 11-bit subtractor for signal <GND_16_o_GND_16_o_sub_47_OUT> created at line 202.
+    Found 13-bit subtractor for signal <GND_16_o_GND_16_o_sub_76_OUT> created at line 232.
+    Found 13-bit subtractor for signal <n0176> created at line 4463.
+    Found 13-bit subtractor for signal <n0177> created at line 4465.
+    Found 12-bit adder for signal <clk_counter[11]_GND_16_o_add_1_OUT> created at line 141.
+    Found 10-bit adder for signal <write_ptr[9]_GND_16_o_add_8_OUT> created at line 154.
+    Found 12-bit adder for signal <n0150> created at line 4471.
+    Found 11-bit adder for signal <GND_16_o_GND_16_o_add_25_OUT> created at line 4409.
+    Found 12-bit adder for signal <n0180> created at line 4471.
+    Found 11-bit adder for signal <GND_16_o_GND_16_o_add_104_OUT> created at line 4409.
+    Found 9-bit subtractor for signal <GND_16_o_adc_int[31]_sub_7_OUT<8:0>> created at line 151.
+    Found 3-bit subtractor for signal <GND_16_o_GND_16_o_sub_28_OUT<2:0>> created at line 4409.
+    Found 3-bit subtractor for signal <GND_16_o_GND_16_o_sub_107_OUT<2:0>> created at line 4409.
+    Found 32x11-bit multiplier for signal <n0142> created at line 151.
+    Found 32x7-bit Read Only RAM for signal <GND_16_o_X_11_o_wide_mux_103_OUT>
+    Found 2048x8-bit Read Only RAM for signal <_n2364>
+    Found 2048x8-bit Read Only RAM for signal <_n4413>
+    Found 1-bit 8-to-1 multiplexer for signal <GND_16_o_GND_16_o_Mux_28_o> created at line 4409.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_16_o_GND_16_o_Mux_107_o> created at line 4409.
+    Found 12-bit comparator greater for signal <V_Pos[11]_GND_16_o_LessThan_13_o> created at line 171
+    Found 12-bit comparator greater for signal <H_Pos[11]_GND_16_o_LessThan_14_o> created at line 4447
+    Found 12-bit comparator greater for signal <V_Pos[11]_GND_16_o_LessThan_15_o> created at line 4447
+    Found 13-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_17_o> created at line 4455
+    Found 13-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_19_o> created at line 4455
+    Found 12-bit comparator lessequal for signal <n0035> created at line 183
+    Found 12-bit comparator lessequal for signal <n0037> created at line 183
+    Found 12-bit comparator lessequal for signal <n0040> created at line 185
+    Found 12-bit comparator lessequal for signal <n0042> created at line 185
+    Found 13-bit comparator equal for signal <GND_16_o_GND_16_o_equal_48_o> created at line 202
+    Found 12-bit comparator greater for signal <V_Pos[11]_GND_16_o_LessThan_64_o> created at line 222
+    Found 12-bit comparator greater for signal <GND_16_o_V_Pos[11]_LessThan_65_o> created at line 222
+    Found 12-bit comparator greater for signal <H_Pos[11]_GND_16_o_LessThan_69_o> created at line 222
+    Found 12-bit comparator greater for signal <GND_16_o_H_Pos[11]_LessThan_70_o> created at line 222
+    Found 12-bit comparator greater for signal <V_Pos[11]_GND_16_o_LessThan_74_o> created at line 232
+    Found 12-bit comparator greater for signal <GND_16_o_V_Pos[11]_LessThan_75_o> created at line 232
+    Found 12-bit comparator greater for signal <H_Pos[11]_GND_16_o_LessThan_79_o> created at line 232
+    Found 12-bit comparator greater for signal <GND_16_o_H_Pos[11]_LessThan_80_o> created at line 232
+    Found 12-bit comparator greater for signal <GND_16_o_V_Pos[11]_LessThan_91_o> created at line 257
+    Found 12-bit comparator lessequal for signal <n0093> created at line 257
+    Found 12-bit comparator greater for signal <H_Pos[11]_GND_16_o_LessThan_93_o> created at line 4447
+    Found 12-bit comparator greater for signal <V_Pos[11]_GND_16_o_LessThan_94_o> created at line 4447
+    Found 13-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_96_o> created at line 4455
+    Found 13-bit comparator greater for signal <GND_16_o_GND_16_o_LessThan_98_o> created at line 4455
+    WARNING:Xst:2404 -  FFs/Latches <adc_int<31:13>> (without init value) have a constant value of 0 in block <VGA_Driver>.
+    Summary:
+	inferred   4 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred  16 Adder/Subtractor(s).
+	inferred  61 D-type flip-flop(s).
+	inferred  24 Comparator(s).
+	inferred  11 Multiplexer(s).
+Unit <VGA_Driver> synthesized.
+
+Synthesizing Unit <VGA_Sync>.
+    Related source file is "C:\Users\h.billor\Desktop\Yeni klasör\vga_sync.vhd".
+    Found 12-bit register for signal <V_Pos>.
+    Found 1-bit register for signal <H_Sync>.
+    Found 1-bit register for signal <V_Sync>.
+    Found 12-bit register for signal <H_Pos>.
+    Found 12-bit adder for signal <H_Pos[11]_GND_17_o_add_5_OUT> created at line 122.
+    Found 12-bit adder for signal <V_Pos[11]_GND_17_o_add_11_OUT> created at line 144.
+    Found 12-bit comparator greater for signal <H_Pos[11]_GND_17_o_LessThan_3_o> created at line 103
+    Found 12-bit comparator greater for signal <V_Pos[11]_GND_17_o_LessThan_4_o> created at line 103
+    Found 12-bit comparator lessequal for signal <n0015> created at line 160
+    Found 12-bit comparator greater for signal <H_Pos[11]_GND_17_o_LessThan_17_o> created at line 160
+    Found 12-bit comparator lessequal for signal <n0021> created at line 182
+    Found 12-bit comparator greater for signal <V_Pos[11]_GND_17_o_LessThan_19_o> created at line 182
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <VGA_Sync> synthesized.
+
+Synthesizing Unit <div_32s_13s>.
+    Related source file is "".
+    Found 32-bit subtractor for signal <a[31]_unary_minus_1_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_19_o_BUS_0001_add_70_OUT[32:0]> created at line 0.
+    Found 45-bit adder for signal <GND_19_o_b[12]_add_5_OUT> created at line 0.
+    Found 44-bit adder for signal <GND_19_o_b[12]_add_7_OUT> created at line 0.
+    Found 43-bit adder for signal <GND_19_o_b[12]_add_9_OUT> created at line 0.
+    Found 42-bit adder for signal <GND_19_o_b[12]_add_11_OUT> created at line 0.
+    Found 41-bit adder for signal <GND_19_o_b[12]_add_13_OUT> created at line 0.
+    Found 40-bit adder for signal <GND_19_o_b[12]_add_15_OUT> created at line 0.
+    Found 39-bit adder for signal <GND_19_o_b[12]_add_17_OUT> created at line 0.
+    Found 38-bit adder for signal <GND_19_o_b[12]_add_19_OUT> created at line 0.
+    Found 37-bit adder for signal <GND_19_o_b[12]_add_21_OUT> created at line 0.
+    Found 36-bit adder for signal <GND_19_o_b[12]_add_23_OUT> created at line 0.
+    Found 35-bit adder for signal <GND_19_o_b[12]_add_25_OUT> created at line 0.
+    Found 34-bit adder for signal <GND_19_o_b[12]_add_27_OUT> created at line 0.
+    Found 33-bit adder for signal <GND_19_o_b[12]_add_29_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_b[12]_add_31_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_33_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_35_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_37_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_39_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_41_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_43_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_45_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_47_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_49_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_51_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_53_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_55_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_57_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_59_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_61_OUT> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_63_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_65_OUT[31:0]> created at line 0.
+    Found 32-bit adder for signal <a[31]_GND_19_o_add_67_OUT[31:0]> created at line 0.
+    Found 45-bit comparator greater for signal <BUS_0001_INV_1345_o> created at line 0
+    Found 44-bit comparator greater for signal <BUS_0002_INV_1344_o> created at line 0
+    Found 43-bit comparator greater for signal <BUS_0003_INV_1343_o> created at line 0
+    Found 42-bit comparator greater for signal <BUS_0004_INV_1342_o> created at line 0
+    Found 41-bit comparator greater for signal <BUS_0005_INV_1341_o> created at line 0
+    Found 40-bit comparator greater for signal <BUS_0006_INV_1340_o> created at line 0
+    Found 39-bit comparator greater for signal <BUS_0007_INV_1339_o> created at line 0
+    Found 38-bit comparator greater for signal <BUS_0008_INV_1338_o> created at line 0
+    Found 37-bit comparator greater for signal <BUS_0009_INV_1337_o> created at line 0
+    Found 36-bit comparator greater for signal <BUS_0010_INV_1336_o> created at line 0
+    Found 35-bit comparator greater for signal <BUS_0011_INV_1335_o> created at line 0
+    Found 34-bit comparator greater for signal <BUS_0012_INV_1334_o> created at line 0
+    Found 33-bit comparator greater for signal <BUS_0013_INV_1333_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0014_INV_1332_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0015_INV_1331_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0016_INV_1330_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0017_INV_1329_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0018_INV_1328_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0019_INV_1327_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0020_INV_1326_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0021_INV_1325_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0022_INV_1324_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0023_INV_1323_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0024_INV_1322_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0025_INV_1321_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0026_INV_1320_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0027_INV_1319_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0028_INV_1318_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0029_INV_1317_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0030_INV_1316_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0031_INV_1315_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0032_INV_1314_o> created at line 0
+    Found 32-bit comparator greater for signal <BUS_0033_INV_1313_o> created at line 0
+    Summary:
+	inferred  34 Adder/Subtractor(s).
+	inferred  33 Comparator(s).
+	inferred 933 Multiplexer(s).
+Unit <div_32s_13s> synthesized.
+
+Synthesizing Unit <mod_12u_5u>.
+    Related source file is "".
+    Found 17-bit adder for signal <n0451> created at line 0.
+    Found 17-bit adder for signal <GND_22_o_b[4]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <n0455> created at line 0.
+    Found 16-bit adder for signal <GND_22_o_b[4]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <n0459> created at line 0.
+    Found 15-bit adder for signal <GND_22_o_b[4]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <n0463> created at line 0.
+    Found 14-bit adder for signal <GND_22_o_b[4]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <n0467> created at line 0.
+    Found 13-bit adder for signal <GND_22_o_b[4]_add_9_OUT> created at line 0.
+    Found 12-bit adder for signal <n0471> created at line 0.
+    Found 12-bit adder for signal <a[11]_b[4]_add_11_OUT> created at line 0.
+    Found 12-bit adder for signal <n0475> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_22_o_add_13_OUT> created at line 0.
+    Found 12-bit adder for signal <n0479> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_22_o_add_15_OUT> created at line 0.
+    Found 12-bit adder for signal <n0483> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_22_o_add_17_OUT> created at line 0.
+    Found 12-bit adder for signal <n0487> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_22_o_add_19_OUT> created at line 0.
+    Found 12-bit adder for signal <n0491> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_22_o_add_21_OUT> created at line 0.
+    Found 12-bit adder for signal <n0495> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_22_o_add_23_OUT> created at line 0.
+    Found 12-bit adder for signal <n0499> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_22_o_add_25_OUT> created at line 0.
+    Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Summary:
+	inferred  26 Adder/Subtractor(s).
+	inferred  13 Comparator(s).
+	inferred 145 Multiplexer(s).
+Unit <mod_12u_5u> synthesized.
+
+Synthesizing Unit <div_12u_5u>.
+    Related source file is "".
+    Found 17-bit adder for signal <n0451> created at line 0.
+    Found 17-bit adder for signal <GND_23_o_b[4]_add_1_OUT> created at line 0.
+    Found 16-bit adder for signal <n0455> created at line 0.
+    Found 16-bit adder for signal <GND_23_o_b[4]_add_3_OUT> created at line 0.
+    Found 15-bit adder for signal <n0459> created at line 0.
+    Found 15-bit adder for signal <GND_23_o_b[4]_add_5_OUT> created at line 0.
+    Found 14-bit adder for signal <n0463> created at line 0.
+    Found 14-bit adder for signal <GND_23_o_b[4]_add_7_OUT> created at line 0.
+    Found 13-bit adder for signal <n0467> created at line 0.
+    Found 13-bit adder for signal <GND_23_o_b[4]_add_9_OUT> created at line 0.
+    Found 12-bit adder for signal <n0471> created at line 0.
+    Found 12-bit adder for signal <a[11]_b[4]_add_11_OUT> created at line 0.
+    Found 12-bit adder for signal <n0475> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_23_o_add_13_OUT> created at line 0.
+    Found 12-bit adder for signal <n0479> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_23_o_add_15_OUT> created at line 0.
+    Found 12-bit adder for signal <n0483> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_23_o_add_17_OUT> created at line 0.
+    Found 12-bit adder for signal <n0487> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_23_o_add_19_OUT[11:0]> created at line 0.
+    Found 12-bit adder for signal <n0491> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_23_o_add_21_OUT[11:0]> created at line 0.
+    Found 12-bit adder for signal <n0495> created at line 0.
+    Found 12-bit adder for signal <a[11]_GND_23_o_add_23_OUT[11:0]> created at line 0.
+    Found 17-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Summary:
+	inferred  24 Adder/Subtractor(s).
+	inferred  13 Comparator(s).
+	inferred 111 Multiplexer(s).
+Unit <div_12u_5u> synthesized.
+
+Synthesizing Unit <rem_13s_8s>.
+    Related source file is "".
+    Found 13-bit subtractor for signal <a[12]_unary_minus_1_OUT> created at line 0.
+    Found 8-bit subtractor for signal <b[7]_unary_minus_3_OUT> created at line 0.
+    Found 21-bit adder for signal <n0580> created at line 0.
+    Found 21-bit adder for signal <GND_26_o_b[7]_add_5_OUT> created at line 0.
+    Found 20-bit adder for signal <n0584> created at line 0.
+    Found 20-bit adder for signal <GND_26_o_b[7]_add_7_OUT> created at line 0.
+    Found 19-bit adder for signal <n0588> created at line 0.
+    Found 19-bit adder for signal <GND_26_o_b[7]_add_9_OUT> created at line 0.
+    Found 18-bit adder for signal <n0592> created at line 0.
+    Found 18-bit adder for signal <GND_26_o_b[7]_add_11_OUT> created at line 0.
+    Found 17-bit adder for signal <n0596> created at line 0.
+    Found 17-bit adder for signal <GND_26_o_b[7]_add_13_OUT> created at line 0.
+    Found 16-bit adder for signal <n0600> created at line 0.
+    Found 16-bit adder for signal <GND_26_o_b[7]_add_15_OUT> created at line 0.
+    Found 15-bit adder for signal <n0604> created at line 0.
+    Found 15-bit adder for signal <GND_26_o_b[7]_add_17_OUT> created at line 0.
+    Found 14-bit adder for signal <n0608> created at line 0.
+    Found 14-bit adder for signal <GND_26_o_b[7]_add_19_OUT> created at line 0.
+    Found 13-bit adder for signal <n0612> created at line 0.
+    Found 13-bit adder for signal <a[12]_b[7]_add_21_OUT> created at line 0.
+    Found 13-bit adder for signal <n0616> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_26_o_add_23_OUT> created at line 0.
+    Found 13-bit adder for signal <n0620> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_26_o_add_25_OUT> created at line 0.
+    Found 13-bit adder for signal <n0624> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_26_o_add_27_OUT> created at line 0.
+    Found 13-bit adder for signal <n0628> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_26_o_add_29_OUT> created at line 0.
+    Found 13-bit adder for signal <n0632> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_26_o_add_31_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_26_o_a[12]_add_32_OUT[7:0]> created at line 0.
+    Found 21-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 20-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 19-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 18-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Summary:
+	inferred  31 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+	inferred 180 Multiplexer(s).
+Unit <rem_13s_8s> synthesized.
+
+Synthesizing Unit <rem_13s_5s>.
+    Related source file is "".
+    Found 13-bit subtractor for signal <a[12]_unary_minus_1_OUT> created at line 0.
+    Found 5-bit subtractor for signal <b[4]_unary_minus_3_OUT> created at line 0.
+    Found 18-bit adder for signal <n0532> created at line 0.
+    Found 18-bit adder for signal <GND_24_o_b[4]_add_5_OUT> created at line 0.
+    Found 17-bit adder for signal <n0536> created at line 0.
+    Found 17-bit adder for signal <GND_24_o_b[4]_add_7_OUT> created at line 0.
+    Found 16-bit adder for signal <n0540> created at line 0.
+    Found 16-bit adder for signal <GND_24_o_b[4]_add_9_OUT> created at line 0.
+    Found 15-bit adder for signal <n0544> created at line 0.
+    Found 15-bit adder for signal <GND_24_o_b[4]_add_11_OUT> created at line 0.
+    Found 14-bit adder for signal <n0548> created at line 0.
+    Found 14-bit adder for signal <GND_24_o_b[4]_add_13_OUT> created at line 0.
+    Found 13-bit adder for signal <n0552> created at line 0.
+    Found 13-bit adder for signal <a[12]_b[4]_add_15_OUT> created at line 0.
+    Found 13-bit adder for signal <n0556> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_17_OUT> created at line 0.
+    Found 13-bit adder for signal <n0560> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_19_OUT> created at line 0.
+    Found 13-bit adder for signal <n0564> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_21_OUT> created at line 0.
+    Found 13-bit adder for signal <n0568> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_23_OUT> created at line 0.
+    Found 13-bit adder for signal <n0572> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_25_OUT> created at line 0.
+    Found 13-bit adder for signal <n0576> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_27_OUT> created at line 0.
+    Found 13-bit adder for signal <n0580> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_29_OUT> created at line 0.
+    Found 13-bit adder for signal <n0584> created at line 0.
+    Found 13-bit adder for signal <a[12]_GND_24_o_add_31_OUT> created at line 0.
+    Found 5-bit adder for signal <GND_24_o_a[12]_add_32_OUT[4:0]> created at line 0.
+    Found 18-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 17-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 16-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0012> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0013> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0014> created at line 0
+    Summary:
+	inferred  31 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+	inferred 177 Multiplexer(s).
+Unit <rem_13s_5s> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 1024x9-bit dual-port RAM                              : 1
+ 2048x8-bit single-port Read Only RAM                  : 2
+ 32x7-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 1
+ 32x11-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 277
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 2
+ 11-bit subtractor                                     : 1
+ 12-bit adder                                          : 65
+ 13-bit adder                                          : 68
+ 13-bit subtractor                                     : 10
+ 14-bit adder                                          : 16
+ 15-bit adder                                          : 16
+ 16-bit adder                                          : 16
+ 17-bit adder                                          : 16
+ 18-bit adder                                          : 8
+ 19-bit adder                                          : 4
+ 20-bit adder                                          : 4
+ 21-bit adder                                          : 4
+ 3-bit subtractor                                      : 2
+ 32-bit adder                                          : 19
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 2
+ 34-bit adder                                          : 1
+ 35-bit adder                                          : 1
+ 36-bit adder                                          : 1
+ 37-bit adder                                          : 1
+ 38-bit adder                                          : 1
+ 39-bit adder                                          : 1
+ 40-bit adder                                          : 1
+ 41-bit adder                                          : 1
+ 42-bit adder                                          : 1
+ 43-bit adder                                          : 1
+ 44-bit adder                                          : 1
+ 45-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 5-bit subtractor                                      : 2
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Registers                                            : 22
+ 1-bit register                                        : 5
+ 10-bit register                                       : 1
+ 12-bit register                                       : 11
+ 5-bit register                                        : 2
+ 6-bit register                                        : 1
+ 9-bit register                                        : 2
+# Comparators                                          : 171
+ 12-bit comparator greater                             : 18
+ 12-bit comparator lessequal                           : 39
+ 13-bit comparator equal                               : 1
+ 13-bit comparator greater                             : 4
+ 13-bit comparator lessequal                           : 34
+ 14-bit comparator lessequal                           : 8
+ 15-bit comparator lessequal                           : 8
+ 16-bit comparator lessequal                           : 8
+ 17-bit comparator lessequal                           : 8
+ 18-bit comparator lessequal                           : 4
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 20
+ 33-bit comparator greater                             : 1
+ 34-bit comparator greater                             : 1
+ 35-bit comparator greater                             : 1
+ 36-bit comparator greater                             : 1
+ 37-bit comparator greater                             : 1
+ 38-bit comparator greater                             : 1
+ 39-bit comparator greater                             : 1
+ 40-bit comparator greater                             : 1
+ 41-bit comparator greater                             : 1
+ 42-bit comparator greater                             : 1
+ 43-bit comparator greater                             : 1
+ 44-bit comparator greater                             : 1
+ 45-bit comparator greater                             : 1
+# Multiplexers                                         : 2173
+ 1-bit 2-to-1 multiplexer                              : 2136
+ 1-bit 8-to-1 multiplexer                              : 2
+ 12-bit 2-to-1 multiplexer                             : 6
+ 13-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+ 33-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 10
+ 6-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <bg_blue_0> in Unit <VGA> is equivalent to the following 2 FFs/Latches, which will be removed : <bg_blue_2> <bg_blue_4> 
+INFO:Xst:2261 - The FF/Latch <bg_blue_1> in Unit <VGA> is equivalent to the following FF/Latch, which will be removed : <bg_blue_3> 
+WARNING:Xst:1426 - The value init of the FF/Latch adc_int hinder the constant cleaning in the block VGA.
+   You should achieve better results by setting this init to 0.
+
+Synthesizing (advanced) Unit <AD9226_Controller>.
+The following registers are absorbed into counter <clk_counter>: 1 register on signal <clk_counter>.
+Unit <AD9226_Controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_Driver>.
+The following registers are absorbed into counter <clk_counter>: 1 register on signal <clk_counter>.
+The following registers are absorbed into counter <write_ptr>: 1 register on signal <write_ptr>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_sample_ram> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     clkA           | connected to signal <clk_10k>       | rise     |
+    |     weA            | connected to signal <VCC>           | high     |
+    |     addrA          | connected to signal <write_ptr>     |          |
+    |     diA            | connected to signal <y_value>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 9-bit                   |          |
+    |     addrB          | connected to signal <n0158[12:0]<9:0>> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_GND_16_o_X_11_o_wide_mux_103_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0180>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n4413> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <GND_16_o_GND_16_o_add_25_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2364> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <GND_16_o_GND_16_o_add_104_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <VGA_Driver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_Sync>.
+The following registers are absorbed into counter <H_Pos>: 1 register on signal <H_Pos>.
+The following registers are absorbed into counter <V_Pos>: 1 register on signal <V_Pos>.
+Unit <VGA_Sync> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 1024x9-bit dual-port distributed RAM                  : 1
+ 2048x8-bit single-port distributed Read Only RAM      : 2
+ 32x7-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 1
+ 32x11-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 166
+ 11-bit adder                                          : 2
+ 11-bit subtractor                                     : 1
+ 12-bit adder carry in                                 : 48
+ 13-bit adder carry in                                 : 52
+ 13-bit subtractor                                     : 10
+ 3-bit subtractor                                      : 2
+ 32-bit adder                                          : 32
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 1
+ 5-bit adder                                           : 3
+ 5-bit adder carry in                                  : 4
+ 5-bit subtractor                                      : 2
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit adder carry in                                  : 2
+ 8-bit subtractor                                      : 2
+ 9-bit subtractor                                      : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 3
+ 9-bit up counter                                      : 1
+# Registers                                            : 126
+ Flip-Flops                                            : 126
+# Comparators                                          : 171
+ 12-bit comparator greater                             : 18
+ 12-bit comparator lessequal                           : 39
+ 13-bit comparator equal                               : 1
+ 13-bit comparator greater                             : 4
+ 13-bit comparator lessequal                           : 34
+ 14-bit comparator lessequal                           : 8
+ 15-bit comparator lessequal                           : 8
+ 16-bit comparator lessequal                           : 8
+ 17-bit comparator lessequal                           : 8
+ 18-bit comparator lessequal                           : 4
+ 19-bit comparator lessequal                           : 2
+ 20-bit comparator lessequal                           : 2
+ 21-bit comparator lessequal                           : 2
+ 32-bit comparator greater                             : 20
+ 33-bit comparator greater                             : 1
+ 34-bit comparator greater                             : 1
+ 35-bit comparator greater                             : 1
+ 36-bit comparator greater                             : 1
+ 37-bit comparator greater                             : 1
+ 38-bit comparator greater                             : 1
+ 39-bit comparator greater                             : 1
+ 40-bit comparator greater                             : 1
+ 41-bit comparator greater                             : 1
+ 42-bit comparator greater                             : 1
+ 43-bit comparator greater                             : 1
+ 44-bit comparator greater                             : 1
+ 45-bit comparator greater                             : 1
+# Multiplexers                                         : 2173
+ 1-bit 2-to-1 multiplexer                              : 2136
+ 1-bit 8-to-1 multiplexer                              : 2
+ 12-bit 2-to-1 multiplexer                             : 6
+ 13-bit 2-to-1 multiplexer                             : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+ 33-bit 2-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 10
+ 6-bit 2-to-1 multiplexer                              : 6
+ 8-bit 2-to-1 multiplexer                              : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch adc_int hinder the constant cleaning in the block VGA_Driver.
+   You should achieve better results by setting this init to 0.
+INFO:Xst:2261 - The FF/Latch <bg_blue_0> in Unit <VGA_Driver> is equivalent to the following 2 FFs/Latches, which will be removed : <bg_blue_2> <bg_blue_4> 
+INFO:Xst:2261 - The FF/Latch <bg_blue_1> in Unit <VGA_Driver> is equivalent to the following FF/Latch, which will be removed : <bg_blue_3> 
+INFO:Xst:2261 - The FF/Latch <bg_green_0> in Unit <VGA_Driver> is equivalent to the following 5 FFs/Latches, which will be removed : <bg_green_1> <bg_green_2> <bg_green_3> <bg_green_4> <bg_green_5> 
+INFO:Xst:2261 - The FF/Latch <bg_red_0> in Unit <VGA_Driver> is equivalent to the following 4 FFs/Latches, which will be removed : <bg_red_1> <bg_red_2> <bg_red_3> <bg_red_4> 
+
+Optimizing unit <TOP_MODULE> ...
+
+Optimizing unit <AD9226_Controller> ...
+
+Optimizing unit <VGA_Driver> ...
+
+Optimizing unit <VGA_Sync> ...
+
+Optimizing unit <div_32s_13s> ...
+INFO:Xst:2261 - The FF/Latch <VGA/clk_counter_0> in Unit <TOP_MODULE> is equivalent to the following FF/Latch, which will be removed : <VGA/VGA_Sync_Module/H_Pos_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP_MODULE, actual ratio is 65.
+
+Final Macro Processing ...
+
+Processing Unit <TOP_MODULE> :
+	Found 7-bit shift register for signal <ADC/delay_line_6_11>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_10>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_9>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_8>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_7>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_6>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_5>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_4>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_3>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_2>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_1>.
+	Found 7-bit shift register for signal <ADC/delay_line_6_0>.
+Unit <TOP_MODULE> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+# Shift Registers                                      : 12
+ 7-bit shift register                                  : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP_MODULE.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5736
+#      GND                         : 1
+#      INV                         : 69
+#      LUT1                        : 68
+#      LUT2                        : 111
+#      LUT3                        : 387
+#      LUT4                        : 212
+#      LUT5                        : 1041
+#      LUT6                        : 1714
+#      MUXCY                       : 871
+#      MUXF7                       : 285
+#      MUXF8                       : 115
+#      VCC                         : 1
+#      XORCY                       : 861
+# FlipFlops/Latches                : 103
+#      FD                          : 22
+#      FDE                         : 12
+#      FDR                         : 38
+#      FDRE                        : 30
+#      ODDR2                       : 1
+# RAMS                             : 48
+#      RAM64M                      : 48
+# Shift Registers                  : 12
+#      SRLC16E                     : 12
+# Clock Buffers                    : 5
+#      BUFG                        : 5
+# IO Buffers                       : 33
+#      IBUF                        : 13
+#      IBUFG                       : 1
+#      OBUF                        : 19
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 2
+#      DSP48A1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             103  out of  11440     0%  
+ Number of Slice LUTs:                 3806  out of   5720    66%  
+    Number used as Logic:              3602  out of   5720    62%  
+    Number used as Memory:              204  out of   1440    14%  
+       Number used as RAM:              192
+       Number used as SRL:               12
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3837
+   Number with an unused Flip Flop:    3734  out of   3837    97%  
+   Number with an unused LUT:            31  out of   3837     0%  
+   Number of fully used LUT-FF pairs:    72  out of   3837     1%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    186    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
+ Number of DSP48A1s:                      2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | DCM_SP:CLKFX           | 54    |
+VGA/clk_10k                        | BUFG                   | 69    |
+ADC/clk_100k                       | BUFG                   | 42    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 88.432ns (Maximum Frequency: 11.308MHz)
+   Minimum input arrival time before clock: 3.957ns
+   Maximum output required time after clock: 8.568ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 66.782ns (frequency: 14.974MHz)
+  Total number of paths / destination ports: 11694968630789 / 113
+-------------------------------------------------------------------------
+Delay:               51.370ns (Levels of Logic = 36)
+  Source:            VGA/VGA_Sync_Module/V_Pos_3 (FF)
+  Destination:       VGA/bg_green_0 (FF)
+  Source Clock:      CLK rising 1.3X
+  Destination Clock: CLK rising 1.3X
+
+  Data Path: VGA/VGA_Sync_Module/V_Pos_3 to VGA/bg_green_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q           274   0.525   2.710  VGA/VGA_Sync_Module/V_Pos_3 (VGA/VGA_Sync_Module/V_Pos_3)
+     LUT4:I0->O           85   0.254   2.201  VGA/GND_16_o_V_Pos[11]_AND_1037_o111 (VGA/GND_16_o_V_Pos[11]_AND_1037_o11)
+     LUT4:I2->O            1   0.250   0.000  VGA/GND_16_o_GND_16_o_rem_52/Msub_a[12]_unary_minus_1_OUT_lut<8> (VGA/GND_16_o_GND_16_o_rem_52/Msub_a[12]_unary_minus_1_OUT_lut<8>)
+     MUXCY:S->O            1   0.215   0.000  VGA/GND_16_o_GND_16_o_rem_52/Msub_a[12]_unary_minus_1_OUT_cy<8> (VGA/GND_16_o_GND_16_o_rem_52/Msub_a[12]_unary_minus_1_OUT_cy<8>)
+     XORCY:CI->O           9   0.206   1.431  VGA/GND_16_o_GND_16_o_rem_52/Msub_a[12]_unary_minus_1_OUT_xor<9> (VGA/GND_16_o_GND_16_o_rem_52/BUS_0001_INV_1990_o_mmx_out19)
+     LUT6:I0->O           13   0.254   1.553  VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o3111 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o311)
+     LUT6:I0->O            5   0.254   1.296  VGA/GND_16_o_GND_16_o_rem_52/BUS_0008_INV_2123_o271 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0008_INV_2123_o)
+     LUT6:I0->O            2   0.254   0.954  VGA/GND_16_o_GND_16_o_rem_52/BUS_0009_INV_2138_o265 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0009_INV_2138_o264)
+     LUT5:I2->O           15   0.235   1.431  VGA/GND_16_o_GND_16_o_rem_52/BUS_0009_INV_2138_o267 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0009_INV_2138_o1)
+     LUT5:I1->O           11   0.254   1.315  VGA/SF27111 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o721)
+     LUT6:I2->O            1   0.254   0.000  VGA/GND_16_o_GND_16_o_rem_52/BUS_0009_INV_2138_o22_F (N1467)
+     MUXF7:I0->O           5   0.163   1.271  VGA/GND_16_o_GND_16_o_rem_52/BUS_0009_INV_2138_o22 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0009_INV_2138_o_mmx_out6)
+     LUT5:I0->O            2   0.254   1.002  VGA/GND_16_o_GND_16_o_rem_52/BUS_0010_INV_2152_o27411 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0010_INV_2152_o2741)
+     LUT6:I2->O            1   0.254   1.112  VGA/GND_16_o_GND_16_o_rem_52/BUS_0010_INV_2152_o277 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0010_INV_2152_o276)
+     LUT5:I0->O           36   0.254   2.042  VGA/GND_16_o_GND_16_o_rem_52/BUS_0010_INV_2152_o278 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0010_INV_2152_o)
+     LUT6:I0->O            1   0.254   1.112  VGA/GND_16_o_GND_16_o_rem_52/Mmux_a[12]_GND_26_o_MUX_4603_o11201 (VGA/GND_16_o_GND_16_o_rem_52/Madd_a[12]_GND_26_o_add_25_OUT_Madd_lut<9>)
+     LUT5:I0->O           38   0.254   2.050  VGA/GND_16_o_GND_16_o_rem_52/BUS_0011_INV_2166_o279 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0011_INV_2166_o)
+     LUT5:I0->O            7   0.254   1.138  VGA/GND_16_o_GND_16_o_rem_52/BUS_0011_INV_2166_o41 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0011_INV_2166_o_mmx_out12)
+     LUT5:I2->O            2   0.235   0.726  VGA/GND_16_o_GND_16_o_rem_52/BUS_0012_INV_2180_o2631 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0012_INV_2180_o263)
+     LUT6:I5->O            1   0.254   0.958  VGA/GND_16_o_GND_16_o_rem_52/BUS_0012_INV_2180_o272 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0012_INV_2180_o271)
+     LUT5:I1->O           40   0.254   1.882  VGA/GND_16_o_GND_16_o_rem_52/BUS_0012_INV_2180_o279 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0012_INV_2180_o)
+     LUT3:I0->O            4   0.235   1.032  VGA/GND_16_o_GND_16_o_rem_52/Mmux_a[12]_GND_26_o_MUX_4603_o11531 (VGA/GND_16_o_GND_16_o_rem_52/Madd_a[12]_GND_26_o_add_29_OUT_Madd_lut<2>)
+     LUT6:I3->O            1   0.235   0.682  VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o176 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o175)
+     LUT6:I5->O            1   0.254   0.682  VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o177 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o176)
+     LUT6:I5->O           29   0.254   1.900  VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o178 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o)
+     LUT5:I0->O            4   0.254   1.259  VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o151 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0013_INV_2194_o_mmx_out9)
+     LUT6:I0->O            3   0.254   0.994  VGA/GND_16_o_GND_16_o_rem_52/Mmux_a[12]_GND_26_o_MUX_4603_o11621 (VGA/GND_16_o_GND_16_o_rem_52/Madd_a[12]_GND_26_o_add_31_OUT_Madd_Madd_lut<6>)
+     LUT6:I3->O            1   0.235   0.958  VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o104 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o103)
+     LUT6:I2->O            1   0.254   0.682  VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o105 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o104)
+     LUT6:I5->O           13   0.254   1.374  VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o108 (VGA/GND_16_o_GND_16_o_rem_52/BUS_0014_INV_2208_o)
+     LUT4:I0->O            4   0.254   1.234  VGA/GND_16_o_GND_16_o_rem_52/Madd_GND_26_o_a[12]_add_32_OUT[7:0]_cy<1>13 (VGA/GND_16_o_GND_16_o_rem_52/Madd_GND_26_o_a[12]_add_32_OUT[7:0]_cy<1>)
+     LUT5:I0->O            6   0.254   1.152  VGA/GND_16_o_GND_16_o_rem_52/Madd_GND_26_o_a[12]_add_32_OUT[7:0]_cy<5>11 (VGA/GND_16_o_GND_16_o_rem_52/Madd_GND_26_o_a[12]_add_32_OUT[7:0]_cy<5>)
+     LUT5:I1->O            1   0.254   1.137  VGA/GND_16_o_GND_16_o_mux_119_OUT<0>103 (VGA/GND_16_o_GND_16_o_mux_119_OUT<0>104)
+     LUT6:I0->O            1   0.254   0.790  VGA/GND_16_o_GND_16_o_mux_119_OUT<0>106 (VGA/GND_16_o_GND_16_o_mux_119_OUT<0>107)
+     LUT6:I4->O            1   0.250   0.958  VGA/GND_16_o_GND_16_o_mux_119_OUT<0>118 (VGA/GND_16_o_GND_16_o_mux_119_OUT<0>119)
+     LUT6:I2->O            1   0.254   0.910  VGA/GND_16_o_GND_16_o_mux_119_OUT<0>119 (VGA/GND_16_o_GND_16_o_mux_119_OUT<0>120)
+     LUT5:I2->O            1   0.235   0.000  VGA/bg_green_0_glue_set (VGA/bg_green_0_glue_set)
+     FDR:D                     0.074          VGA/bg_green_0
+    ----------------------------------------
+    Total                     51.370ns (9.443ns logic, 41.927ns route)
+                                       (18.4% logic, 81.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA/clk_10k'
+  Clock period: 88.432ns (frequency: 11.308MHz)
+  Total number of paths / destination ports: 779951576600371370000000000000000000 / 499
+-------------------------------------------------------------------------
+Delay:               88.432ns (Levels of Logic = 115)
+  Source:            VGA/Mmult_n0142 (DSP)
+  Destination:       VGA/y_value_8 (FF)
+  Source Clock:      VGA/clk_10k rising
+  Destination Clock: VGA/clk_10k rising
+
+  Data Path: VGA/Mmult_n0142 to VGA/y_value_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->P47     18   5.865   1.234  VGA/Mmult_n0142 (VGA/Mmult_n0142_P47_to_Mmult_n01421)
+     DSP48A1:C30->P3      13   3.141   1.097  VGA/Mmult_n01421 (VGA/n0142<20>)
+     INV:I->O              1   0.255   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_lut<20>_INV_0 (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_lut<20>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<20> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<21> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<22> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<23> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<24> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<25> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<26> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<27> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<28> (VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_cy<28>)
+     XORCY:CI->O          15   0.206   1.155  VGA/adc_int[31]_GND_16_o_div_5/Msub_a[31]_unary_minus_1_OUT_xor<29> (VGA/adc_int[31]_GND_16_o_div_5/a[31]_unary_minus_1_OUT<29>)
+     LUT3:I2->O           11   0.254   1.469  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_mux_1_OUT221 (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_b[12]_add_11_OUT_Madd_cy<29>)
+     LUT6:I1->O            3   0.254   0.766  VGA/adc_int[31]_GND_16_o_div_5/BUS_0014_INV_1332_o12_SW4 (N669)
+     LUT6:I5->O            4   0.254   0.912  VGA/adc_int[31]_GND_16_o_div_5/BUS_0014_INV_1332_o12_2 (VGA/adc_int[31]_GND_16_o_div_5/BUS_0014_INV_1332_o121)
+     LUT5:I3->O           12   0.250   1.499  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1138_o1121 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1150_o)
+     LUT6:I1->O           11   0.254   1.039  VGA/adc_int[31]_GND_16_o_div_5/BUS_0015_INV_1331_o21_1 (VGA/adc_int[31]_GND_16_o_div_5/BUS_0015_INV_1331_o211)
+     LUT6:I5->O            6   0.254   1.306  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1170_o191 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1179_o)
+     LUT6:I1->O            1   0.254   0.790  VGA/adc_int[31]_GND_16_o_div_5/BUS_0016_INV_1330_o21_3 (VGA/adc_int[31]_GND_16_o_div_5/BUS_0016_INV_1330_o213)
+     LUT6:I4->O            7   0.250   1.018  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1202_o1141 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1216_o)
+     LUT6:I4->O            7   0.250   1.018  VGA/adc_int[31]_GND_16_o_div_5/BUS_0017_INV_1329_o21_1 (VGA/adc_int[31]_GND_16_o_div_5/BUS_0017_INV_1329_o211)
+     LUT5:I3->O            2   0.250   1.156  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1234_o111_SW0 (N835)
+     LUT6:I1->O           17   0.254   1.317  VGA/adc_int[31]_GND_16_o_div_5/BUS_0018_INV_1328_o21_1 (VGA/adc_int[31]_GND_16_o_div_5/BUS_0018_INV_1328_o211)
+     LUT5:I3->O            7   0.250   1.340  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1266_o121 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1268_o)
+     LUT5:I0->O           12   0.254   1.177  VGA/adc_int[31]_GND_16_o_div_5/BUS_0019_INV_1327_o21_SW1 (N426)
+     LUT6:I4->O            1   0.250   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1298_o11611 (VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1298_o1161)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<15> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<16> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<17> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<18> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<19> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<20> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<21> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<22> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<23> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<24> (VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_cy<24>)
+     XORCY:CI->O           2   0.206   0.726  VGA/adc_int[31]_GND_16_o_div_5/Madd_a[31]_GND_19_o_add_43_OUT_xor<25> (VGA/adc_int[31]_GND_16_o_div_5/a[31]_GND_19_o_add_43_OUT<25>)
+     LUT6:I5->O            7   0.254   1.365  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1330_o161 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1336_o)
+     LUT6:I0->O            7   0.254   1.138  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1362_o161_SW0 (N1084)
+     LUT6:I3->O            3   0.235   1.196  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1362_o151 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1367_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0022_INV_1324_o_lut<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0022_INV_1324_o_lut<3>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0022_INV_1324_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0022_INV_1324_o_cy<3>)
+     MUXCY:CI->O          72   0.235   1.992  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0022_INV_1324_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0022_INV_1324_o_cy<4>)
+     LUT5:I4->O            5   0.254   1.271  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1394_o191 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1403_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_cy<3>)
+     MUXCY:CI->O          85   0.235   2.093  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0023_INV_1323_o_cy<4>)
+     LUT3:I2->O            3   0.254   1.196  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1426_o1101 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1436_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_cy<3>)
+     MUXCY:CI->O          79   0.235   2.046  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0024_INV_1322_o_cy<4>)
+     LUT5:I4->O            5   0.254   1.271  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1458_o181 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1466_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0025_INV_1321_o_lut<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0025_INV_1321_o_lut<3>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0025_INV_1321_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0025_INV_1321_o_cy<3>)
+     MUXCY:CI->O          95   0.235   2.170  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0025_INV_1321_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0025_INV_1321_o_cy<4>)
+     LUT3:I2->O            3   0.254   1.196  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1490_o1121 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1502_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_cy<3>)
+     MUXCY:CI->O          87   0.235   2.108  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0026_INV_1320_o_cy<4>)
+     LUT5:I4->O            5   0.254   1.271  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1522_o1101 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1532_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_lut<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_lut<3>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_cy<4>)
+     MUXCY:CI->O         101   0.235   2.212  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0027_INV_1319_o_cy<5>)
+     LUT3:I2->O            3   0.254   1.196  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1554_o1141 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1568_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<4>)
+     MUXCY:CI->O          90   0.235   2.131  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0028_INV_1318_o_cy<5>)
+     LUT5:I4->O            5   0.254   1.271  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1586_o1121 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1598_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_lut<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_lut<3>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_cy<4>)
+     MUXCY:CI->O         112   0.235   2.246  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0029_INV_1317_o_cy<5>)
+     LUT3:I2->O            4   0.254   1.234  VGA/adc_int[31]_GND_16_o_div_5/Mmux_a[31]_a[31]_MUX_1618_o1161 (VGA/adc_int[31]_GND_16_o_div_5/a[31]_a[31]_MUX_1634_o)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<4>)
+     MUXCY:CI->O         121   0.023   2.274  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0030_INV_1316_o_cy<5>)
+     LUT3:I2->O            3   0.254   1.196  VGA/adc_int[31]_GND_16_o_div_5/Mmux_n275961 (VGA/adc_int[31]_GND_16_o_div_5/n2759<14>)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<4>)
+     MUXCY:CI->O          88   0.235   2.116  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0031_INV_1315_o_cy<5>)
+     LUT3:I2->O            2   0.254   1.156  VGA/adc_int[31]_GND_16_o_div_5/Mmux_n276351 (VGA/adc_int[31]_GND_16_o_div_5/n2763<13>)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<5>)
+     MUXCY:CI->O          30   0.235   1.487  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<6> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0032_INV_1314_o_cy<6>)
+     LUT5:I4->O            2   0.254   1.156  VGA/adc_int[31]_GND_16_o_div_5/Mmux_n263341 (VGA/adc_int[31]_GND_16_o_div_5/n2633<12>)
+     LUT5:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_lut<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_lut<2>)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<5>)
+     MUXCY:CI->O           2   0.235   0.726  VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<6> (VGA/adc_int[31]_GND_16_o_div_5/Mcompar_BUS_0033_INV_1313_o_cy<6>)
+     LUT1:I0->O            1   0.254   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<0>_rt (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<0>_rt)
+     MUXCY:S->O            1   0.215   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<0> (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<1> (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<2> (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<3> (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<4> (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<5> (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<6> (VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_cy<6>)
+     XORCY:CI->O           2   0.206   1.181  VGA/adc_int[31]_GND_16_o_div_5/Madd_GND_19_o_BUS_0001_add_70_OUT[32:0]_xor<7> (VGA/adc_int[31]_GND_16_o_div_5/GND_19_o_BUS_0001_add_70_OUT[32:0]<7>)
+     LUT6:I0->O            1   0.254   0.000  VGA/Msub_GND_16_o_adc_int[31]_sub_7_OUT<8:0>_xor<8>11_G (N1488)
+     MUXF7:I1->O           1   0.175   0.000  VGA/Msub_GND_16_o_adc_int[31]_sub_7_OUT<8:0>_xor<8>11 (VGA/GND_16_o_adc_int[31]_sub_7_OUT<8>)
+     FD:D                      0.074          VGA/y_value_8
+    ----------------------------------------
+    Total                     88.432ns (27.519ns logic, 60.913ns route)
+                                       (31.1% logic, 68.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ADC/clk_100k'
+  Clock period: 1.922ns (frequency: 520.291MHz)
+  Total number of paths / destination ports: 41 / 29
+-------------------------------------------------------------------------
+Delay:               1.922ns (Levels of Logic = 1)
+  Source:            ADC/RST_N_inv_shift6 (FF)
+  Destination:       ADC/delay_line_6_0 (FF)
+  Source Clock:      ADC/clk_100k rising
+  Destination Clock: ADC/clk_100k rising
+
+  Data Path: ADC/RST_N_inv_shift6 to ADC/delay_line_6_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            12   0.525   1.069  ADC/RST_N_inv_shift6 (ADC/RST_N_inv_shift6)
+     LUT2:I1->O            1   0.254   0.000  ADC/delay_line_6_011 (ADC/delay_line_6_011)
+     FDRE:D                    0.074          ADC/delay_line_6_0
+    ----------------------------------------
+    Total                      1.922ns (0.853ns logic, 1.069ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ADC/clk_100k'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              3.957ns (Levels of Logic = 2)
+  Source:            RST_N (PAD)
+  Destination:       ADC/RST_N_inv_shift1 (FF)
+  Destination Clock: ADC/clk_100k rising
+
+  Data Path: RST_N to ADC/RST_N_inv_shift1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  RST_N_IBUF (RST_N_IBUF)
+     INV:I->O             18   0.255   1.234  ADC/RST_N_inv1_INV_0 (ADC/RST_N_inv)
+     FDRE:R                    0.459          ADC/RST_N_inv_shift1
+    ----------------------------------------
+    Total                      3.957ns (2.042ns logic, 1.915ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 114 / 18
+-------------------------------------------------------------------------
+Offset:              8.568ns (Levels of Logic = 3)
+  Source:            VGA/VGA_Sync_Module/H_Pos_11 (FF)
+  Destination:       VGA_G<5> (PAD)
+  Source Clock:      CLK rising 1.3X
+
+  Data Path: VGA/VGA_Sync_Module/H_Pos_11 to VGA_G<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q            194   0.525   2.840  VGA/VGA_Sync_Module/H_Pos_11 (VGA/VGA_Sync_Module/H_Pos_11)
+     LUT6:I1->O            4   0.254   0.912  VGA/VGA_Sync_Module/active1 (VGA/VGA_Sync_Module/active)
+     LUT2:I0->O            6   0.250   0.875  VGA/VGA_Sync_Module/Mmux_VGA_G11 (VGA_G_0_OBUF)
+     OBUF:I->O                 2.912          VGA_G_0_OBUF (VGA_G<0>)
+    ----------------------------------------
+    Total                      8.568ns (3.941ns logic, 4.627ns route)
+                                       (46.0% logic, 54.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ADC/clk_100k
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ADC/clk_100k   |    1.922|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   51.370|         |         |         |
+VGA/clk_10k    |   10.898|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock VGA/clk_10k
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ADC/clk_100k   |    1.367|         |         |         |
+VGA/clk_10k    |   88.432|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 79.00 secs
+Total CPU time to Xst completion: 79.26 secs
+ 
+--> 
+
+Total memory usage is 274476 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

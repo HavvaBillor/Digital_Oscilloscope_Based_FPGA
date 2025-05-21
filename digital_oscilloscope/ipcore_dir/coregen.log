@@ -1,0 +1,51 @@
+INFO:sim:172 - Generating IP...
+Resolving generics for 'PLL1'...
+Applying external generics to 'PLL1'...
+Delivering associated files for 'PLL1'...
+WARNING:sim - Component clk_wiz_v3_5 does not have a valid model name for VHDL
+   synthesis
+Delivering EJava files for 'PLL1'...
+Delivered 3 files into directory
+C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PLL1
+Delivered 1 file into directory
+C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PLL1
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '6slx9.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'PLL1'...
+Generating ISE project...
+XCO file found: PLL1.xco
+XMDF file found: PLL1_xmdf.tcl
+Adding
+C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PLL1/e
+xample_design/PLL1_exdes.ucf -view all -origin_type created
+Adding
+C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PLL1/e
+xample_design/PLL1_exdes.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PL
+   L1/example_design/PLL1_exdes.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PLL1.a
+sy -view all -origin_type imported
+Adding
+C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PLL1.v
+hd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PL
+   L1.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/ipcore_dir/tmp/_cg/PLL1.v
+ho -view all -origin_type imported
+WARNING: This core does not have a top level called "/PLL1"
+WARNING: Top level has been set to "/PLL1_exdes"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'PLL1'.

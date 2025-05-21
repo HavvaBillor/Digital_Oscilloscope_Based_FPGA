@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/TOP_MODULE.xst" -ofn "C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/TOP_MODULE.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc "C:/Users/h.billor/Desktop/Yeni klasör/port.ucf" -p xc6slx9-ftg256-2 TOP_MODULE.ngc TOP_MODULE.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc PORT1.ucf -p xc6slx9-ftg256-2 TOP_MODULE.ngc TOP_MODULE.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TOP_MODULE_map.ncd TOP_MODULE.ngd TOP_MODULE.pcf 
+par -w -intstyle ise -ol high -mt off TOP_MODULE_map.ncd TOP_MODULE.ncd TOP_MODULE.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml TOP_MODULE.twx TOP_MODULE.ncd -o TOP_MODULE.twr TOP_MODULE.pcf -ucf PORT1.ucf 
+bitgen -intstyle ise -f TOP_MODULE.ut TOP_MODULE.ncd 
+xst -intstyle ise -ifn "C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/TOP_MODULE.xst" -ofn "C:/Users/h.billor/Desktop/PROJECT/digital_oscilloscope/TOP_MODULE.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc PORT1.ucf -p xc6slx9-ftg256-2 TOP_MODULE.ngc TOP_MODULE.ngd  
+map -intstyle ise -p xc6slx9-ftg256-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TOP_MODULE_map.ncd TOP_MODULE.ngd TOP_MODULE.pcf 
+par -w -intstyle ise -ol high -mt off TOP_MODULE_map.ncd TOP_MODULE.ncd TOP_MODULE.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml TOP_MODULE.twx TOP_MODULE.ncd -o TOP_MODULE.twr TOP_MODULE.pcf -ucf PORT1.ucf 
+bitgen -intstyle ise -f TOP_MODULE.ut TOP_MODULE.ncd 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\h.billor\Desktop\PROJECT\digital_oscilloscope\TOP_MODULE.ncd
+OUTFILE=C:\Users\h.billor\Desktop\PROJECT\digital_oscilloscope\TOP_MODULE.bit
+FAMILY=Spartan6
+PART=xc6slx9-2ftg256
+WORKINGDIR=C:\Users\h.billor\Desktop\PROJECT\digital_oscilloscope
+LICENSE=WebPack
+USER_INFO=212886498_0_0_358
