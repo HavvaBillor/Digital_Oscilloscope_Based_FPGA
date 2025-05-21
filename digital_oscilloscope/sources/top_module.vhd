@@ -35,12 +35,11 @@ architecture Behavioral of TOP_MODULE is
 component AD9226_Controller is
 
     Port (
-		  CLK       : in std_logic;
-		  RST_N		: in std_logic;
-		  START		: in std_logic;
-		  PIADCDATA : in STD_LOGIC_VECTOR(11 downto 0);
+	  CLK       : in std_logic;
+	  RST_N	    : in std_logic;
+	  START	    : in std_logic;
+	  PIADCDATA : in STD_LOGIC_VECTOR(11 downto 0);
           POADCDATA : out STD_LOGIC_VECTOR(11 downto 0)
-
     );
 
 end component;
@@ -92,9 +91,9 @@ PLL: PLL1
 ADC : AD9226_Controller 
 
     Port map (
-		  CLK       => data_clk, 
-		  RST_N 	=> RST_N,
-		  START     =>'1',
+	  CLK       => data_clk, 
+	  RST_N     => RST_N,
+	  START     =>'1',
           PIADCDATA => DATA, 
           POADCDATA => SDATA  
 
@@ -103,7 +102,7 @@ ADC : AD9226_Controller
 
 VGA: VGA_Driver 
 	port map(
-		CLK	   => pixel_clk,
+		CLK    => pixel_clk,
 		DATA   => SDATA, 	
 		VGA_HS => VGA_HS,
 		VGA_VS => VGA_VS,
