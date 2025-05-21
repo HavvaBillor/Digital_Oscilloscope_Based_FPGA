@@ -23,8 +23,9 @@ Below is a sample of the waveform captured and displayed by the oscilloscope:
 ---
 
 ## Demo Video  
-Watch the oscilloscope in action on YouTube:  
-[![Watch Demo](https://www.youtube.com/watch?v=9k-vpKA3Uqw)
+Watch the oscilloscope in action on YouTube:   
+📺 [WATCH DEMO](https://www.youtube.com/watch?v=9k-vpKA3Uqw)
+
 
 ---
 
