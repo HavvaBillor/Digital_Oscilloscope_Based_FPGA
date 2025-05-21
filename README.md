@@ -10,7 +10,6 @@ It performs real-time analog signal sampling and displays the waveform via VGA o
 - 12-bit, 65 MSPS AD9226 ADC for high-speed data acquisition  
 - Real-time signal processing on Spartan-6 FPGA using VHDL  
 - VGA output for waveform visualization  
-- Modular and extensible hardware design
 
 ---
 
