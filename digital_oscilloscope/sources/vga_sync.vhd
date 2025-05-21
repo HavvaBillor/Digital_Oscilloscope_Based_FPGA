@@ -9,20 +9,18 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 
-
-
 entity VGA_Sync is
     port ( 
         CLK : in std_logic;
-		bg_blue : in std_logic_vector (4 downto 0);
-		bg_green: in std_logic_vector (5 downto 0);
-		bg_red: in std_logic_vector (4 downto 0);
+	bg_blue : in std_logic_vector (4 downto 0);
+	bg_green: in std_logic_vector (5 downto 0);
+	bg_red: in std_logic_vector (4 downto 0);
         H_PosOut, V_PosOut : out std_logic_vector(11 downto 0);
         VGA_HS, VGA_VS : out std_logic;
         VGA_B : out std_logic_vector (4 downto 0);
-		VGA_G: out std_logic_vector (5 downto 0);
-		VGA_R: out std_logic_vector (4 downto 0)
-		);
+	VGA_G: out std_logic_vector (5 downto 0);
+	VGA_R: out std_logic_vector (4 downto 0)
+	);
 
 end VGA_Sync;
 
